@@ -1,5 +1,5 @@
 import numpy as np
-from numba import jit, vectorize
+from numba import jit, njit
 import time
 
 @jit(nopython=True)
@@ -8,6 +8,13 @@ def simple_returns(t1, t0):
 
 @jit(nopython=True)
 def loop_numba_returns(array: np.array) -> np.array:
+    returns = np.zeros(len(array) -1)
+    for index in range(len(array) - 1):
+        returns[index] = simple_returns(array[index + 1], array[index])
+    return returns
+
+@njit
+def loop_numba_returns_njit(array: np.array) -> np.array:
     returns = np.zeros(len(array) -1)
     for index in range(len(array) - 1):
         returns[index] = simple_returns(array[index + 1], array[index])
@@ -37,6 +44,8 @@ if __name__ == "__main__":
     r3 = loop_np_returns(example_array)
     loop_np_end = time.time()
 
-    print(r1)
-    print(r2)
-    print(r3)
+    loop_numba_njit_start = time.time()
+    r4 = loop_numba_returns_njit(example_array)
+    loop_numba_njit_end = time.time()
+
+    print(r1, r2, r3, r4)
