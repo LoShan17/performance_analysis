@@ -16,14 +16,15 @@ Following are reported a few profiled runs of performance_analysis.py
 
 Ordered by: internal time
 
-ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-1   11.961   11.961   13.166   13.166 performance_analysis.py:26(loop_np_returns)
-9999999    1.205    0.000    1.205    0.000 performance_analysis.py:5(simple_returns)
-1    0.122    0.122    0.122    0.122 {method 'randint' of 'numpy.random.mtrand.RandomState' objects}
-1579    0.081    0.000    0.081    0.000 ffi.py:105(__call__)
-1    0.078    0.078    0.078    0.078 performance_analysis.py:16(loop_numba_returns_njit)
-1    0.078    0.078    0.078    0.078 performance_analysis.py:9(loop_numba_returns)
-1    0.075    0.075    0.075    0.075 performance_analysis.py:23(vectorized_np_returns)
+* ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+* 1   11.961   11.961   13.166   13.166 performance_analysis.py:26(loop_np_returns)
+* 9999999    1.205    0.000    1.205    0.000 performance_analysis.py:5(simple_returns)
+* 1    0.122    0.122    0.122    0.122 {method 'randint' of 'numpy.random.mtrand.RandomState' objects}
+* 1579    0.081    0.000    0.081    0.000 ffi.py:105(__call__)
+* 1    0.078    0.078    0.078    0.078 performance_analysis.py:16(loop_numba_returns_njit)
+* 1    0.078    0.078    0.078    0.078 performance_analysis.py:9(loop_numba_returns)
+* 1    0.075    0.075    0.075    0.075 performance_analysis.py:23(vectorized_np_returns)
+
 ---------------------------------------------------------------------------------
 10540023 function calls (10518391 primitive calls) in 12.989 seconds
 
@@ -36,7 +37,9 @@ ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 1    0.083    0.083    0.083    0.083 performance_analysis.py:16(loop_numba_returns_njit)
 1    0.077    0.077    0.077    0.077 performance_analysis.py:9(loop_numba_returns)
 1579    0.076    0.000    0.076    0.000 ffi.py:105(__call__)
-1    0.074    0.074    0.074    0.074 performance_analysis.py:23(vectorized_np_returns)---------------------------------------------------------------------------------
+1    0.074    0.074    0.074    0.074 performance_analysis.py:23(vectorized_np_returns)
+
+---------------------------------------------------------------------------------
 10540222 function calls (10518582 primitive calls) in 14.061 seconds
 
 Ordered by: internal time
@@ -49,6 +52,7 @@ ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 1579    0.083    0.000    0.083    0.000 ffi.py:105(__call__)
 1    0.074    0.074    0.074    0.074 performance_analysis.py:9(loop_numba_returns)
 1    0.072    0.072    0.072    0.072 performance_analysis.py:23(vectorized_np_returns)
+
 ---------------------------------------------------------------------------------
 10540208 function calls (10518568 primitive calls) in 13.662 seconds
 
@@ -62,6 +66,7 @@ ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 1    0.078    0.078    0.078    0.078 performance_analysis.py:23(vectorized_np_returns)
 1579    0.076    0.000    0.076    0.000 ffi.py:105(__call__)
 1    0.075    0.075    0.075    0.075 performance_analysis.py:9(loop_numba_returns)
+
 ---------------------------------------------------------------------------------
 10540200 function calls (10518560 primitive calls) in 14.899 seconds
 
@@ -75,4 +80,3 @@ ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 1579    0.094    0.000    0.094    0.000 ffi.py:105(__call__)
 1    0.081    0.081    0.081    0.081 performance_analysis.py:23(vectorized_np_returns)
 1    0.076    0.076    0.076    0.076 performance_analysis.py:16(loop_numba_returns_njit)
----------------------------------------------------------------------------------
